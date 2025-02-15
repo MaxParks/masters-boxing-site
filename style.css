@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', serif;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     color: #000000;
     margin: 0;
     padding: 0;
@@ -15,14 +15,36 @@ header {
     font-weight: bold;
 }
 
-
-nav {
-    background-color: #222;
-    padding: 10px 0;
-    text-align: center;
+header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem; /* Adjust as needed */
+    letter-spacing: 1px; /* Optional for extra spacing */
+    text-transform: uppercase; /* Optional if you want all caps */
+    margin: 0; /* Ensure no extra spacing above/below */
 }
 
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+
+nav {
+    background-color: #5e5b5b;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -30,7 +52,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 5px;
 }
 
 nav ul li a {
@@ -48,7 +70,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .hero, .info, .event-details, .weight-classes, .tickets, .register {
-    background: white;
+    background: #eeecec;
     padding: 40px;
     margin: 20px;
     border-radius: 5px;
@@ -61,7 +83,7 @@ nav ul li a:hover, nav ul li a.active {
     font-weight: bold;
 }
 
-.hero .btn {
+.event-details .btn {
     display: inline-block;
     padding: 12px 24px;
     background-color: #ff6600;
@@ -82,9 +104,6 @@ h3 {
     font-weight: bold;
 }
 
-p, label {
-    font-size: 18px;
-}
 
 footer {
     margin-top: 20px;
@@ -94,17 +113,49 @@ footer {
     font-size: 16px;
 }
 
+/* Remove the single-column layout */
 .register form {
+    width: 60%;          /* or 70% if you prefer */
+    margin: 0 auto;      /* center the form */
+    display: block;      /* let form groups handle layout */
+    text-align: left;    /* so labels align left */
+  }
+
+  /* Each group is a row */
+  .form-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;         /* allows wrapping on smaller screens */
+    justify-content: space-between;
+    margin-bottom: 20px;     /* spacing between rows */
+    gap: 30px;
+  }
+
+  /* Each field takes up half (or less) of the row */
+  .form-field {
+    flex: 1;                 /* expand to fill row space */
+    min-width: 45%;          /* ensures two columns side by side */
+    margin-right: 10px;      /* spacing between fields */
+  }
+
+  .button-row {
+    justify-content: center; /* ensures button is centered */
+  }
+
+
+.required {
+    content: " *";
+    color: red;
+    font-size: 15px;
 }
 
-.register form input {
-    width: 60%;
-    padding: 10px;
+.register form input, .register form select {
+    width: 100%;
+    padding: 12px;
     margin: 10px 0;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
 }
 
 .register button {
@@ -114,4 +165,55 @@ footer {
     border: none;
     cursor: pointer;
     font-size: 18px;
+    border-radius: 5px;
 }
+
+.register button:hover {
+    background-color: #e65c00;
+}
+
+.venmo-btn {
+    display: inline-block;
+    background-color: transparent;       /* No background color */
+    border: 8px solid #0077ff;          /* Thin border around image */
+    border-radius: 8px;                     /* Spacing around image */
+    text-decoration: none;              /* Remove underline */
+}
+
+.venmo-btn:hover {
+    background-color: transparent;      /* Keep it transparent on hover */
+    border-color: #66b3ff;             /* Optional: lighten border on hover */
+}
+
+.venmo-btn img {
+    display: block;
+    margin: 0 auto;                    /* Center the image if needed */
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+      width: 90%; /* let the container breathe on small screens */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-field {
+      min-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 18px; /* Maybe smaller if you want */
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .hero h2 {
+      font-size: 30px;
+    }
+    /* etc. */
+  }
