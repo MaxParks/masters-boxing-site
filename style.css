@@ -71,10 +71,12 @@ nav ul li a:hover, nav ul li a.active {
 
 .hero, .info, .event-details, .weight-classes, .tickets, .register {
     background: #eeecec;
+    max-width: 800px;
     padding: 40px;
-    margin: 20px;
+    margin: 20px auto;
+    text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 .hero h2 {
@@ -115,7 +117,7 @@ footer {
 
 /* Remove the single-column layout */
 .register form {
-    width: 60%;          /* or 70% if you prefer */
+    width: 80%;          /* or 70% if you prefer */
     margin: 0 auto;      /* center the form */
     display: block;      /* let form groups handle layout */
     text-align: left;    /* so labels align left */
