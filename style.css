@@ -76,7 +76,7 @@ nav ul li a:hover, nav ul li a.active {
     margin: 20px auto;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
 }
 
 .hero h2 {
@@ -177,15 +177,11 @@ footer {
 .venmo-btn {
     display: inline-block;
     background-color: transparent;       /* No background color */
-    border: 8px solid #0077ff;          /* Thin border around image */
+    border: 8px solid #008CFF;          /* Thin border around image */
     border-radius: 8px;                     /* Spacing around image */
     text-decoration: none;              /* Remove underline */
 }
 
-.venmo-btn:hover {
-    background-color: transparent;      /* Keep it transparent on hover */
-    border-color: #66b3ff;             /* Optional: lighten border on hover */
-}
 
 .venmo-btn img {
     display: block;
